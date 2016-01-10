@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Reformat code", "01. Reformat code\01. Reformat code.csproj", "{71422189-EAAE-4E3A-8C1F-D7D33D36B43D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Reformat Your Own Code", "02. Reformat Your Own Code\02. Reformat Your Own Code.csproj", "{F03B46B1-77F5-40C1-8689-47DE0D0C2598}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71422189-EAAE-4E3A-8C1F-D7D33D36B43D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71422189-EAAE-4E3A-8C1F-D7D33D36B43D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71422189-EAAE-4E3A-8C1F-D7D33D36B43D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71422189-EAAE-4E3A-8C1F-D7D33D36B43D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F03B46B1-77F5-40C1-8689-47DE0D0C2598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F03B46B1-77F5-40C1-8689-47DE0D0C2598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F03B46B1-77F5-40C1-8689-47DE0D0C2598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F03B46B1-77F5-40C1-8689-47DE0D0C2598}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
