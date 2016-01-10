@@ -18,10 +18,7 @@
 
 		public string FacultyNumber
 		{
-			get
-			{
-				return facultyNumber;
-			}
+			get { return facultyNumber; }
 			set
 			{
 				if (value.Length < FacultyNumberLowerBound || value.Length > FacultyNumberUpperBound)
