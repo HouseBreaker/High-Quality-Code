@@ -1,32 +1,35 @@
-﻿using System;
-
-namespace CohesionAndCoupling
+﻿namespace CohesionAndCoupling
 {
-    class UtilsExamples
-    {
-        static void Main()
-        {
-            Console.WriteLine(Utils.GetFileExtension("example"));
-            Console.WriteLine(Utils.GetFileExtension("example.pdf"));
-            Console.WriteLine(Utils.GetFileExtension("example.new.pdf"));
+	using System;
 
-            Console.WriteLine(Utils.GetFileNameWithoutExtension("example"));
-            Console.WriteLine(Utils.GetFileNameWithoutExtension("example.pdf"));
-            Console.WriteLine(Utils.GetFileNameWithoutExtension("example.new.pdf"));
+	using CohesionAndCoupling.Utils;
 
-            Console.WriteLine("Distance in the 2D space = {0:f2}",
-                Utils.CalcDistance2D(1, -2, 3, 4));
-            Console.WriteLine("Distance in the 3D space = {0:f2}",
-                Utils.CalcDistance3D(5, 2, -1, 3, -6, 4));
+	public class UtilsExamples
+	{
+		public static void Main()
+		{
+			// throws InvalidOperationException
+			// Console.WriteLine(FilenameUtils.GetFileExtension("example"));
+			Console.WriteLine(FilenameUtils.GetFileExtension("example.pdf"));
+			Console.WriteLine(FilenameUtils.GetFileExtension("example.new.pdf"));
 
-            Utils.Width = 3;
-            Utils.Height = 4;
-            Utils.Depth = 5;
-            Console.WriteLine("Volume = {0:f2}", Utils.CalcVolume());
-            Console.WriteLine("Diagonal XYZ = {0:f2}", Utils.CalcDiagonalXYZ());
-            Console.WriteLine("Diagonal XY = {0:f2}", Utils.CalcDiagonalXY());
-            Console.WriteLine("Diagonal XZ = {0:f2}", Utils.CalcDiagonalXZ());
-            Console.WriteLine("Diagonal YZ = {0:f2}", Utils.CalcDiagonalYZ());
-        }
-    }
+			Console.WriteLine(FilenameUtils.GetFileNameWithoutExtension("example"));
+			Console.WriteLine(FilenameUtils.GetFileNameWithoutExtension("example.pdf"));
+			Console.WriteLine(FilenameUtils.GetFileNameWithoutExtension("example.new.pdf"));
+
+			Console.WriteLine("Distance in the 2D space = {0:f2}", GeometryUtils.CalcDistance2D(1, -2, 3, 4));
+			Console.WriteLine("Distance in the 3D space = {0:f2}", GeometryUtils.CalcDistance3D(5, 2, -1, 3, -6, 4));
+
+			const double Width = 3;
+			const double Height = 4;
+			const double Depth = 5;
+
+			Console.WriteLine("Volume = {0:f2}", GeometryUtils.CalcVolume(Width, Height, Depth));
+
+			Console.WriteLine("Diagonal XYZ = {0:f2}", GeometryUtils.CalcDiagonal3Sides(Width, Height, Depth));
+			Console.WriteLine("Diagonal XY  = {0:f2}", GeometryUtils.CalcDiagonal2Sides(Width, Height));
+			Console.WriteLine("Diagonal XZ  = {0:f2}", GeometryUtils.CalcDiagonal2Sides(Width, Depth));
+			Console.WriteLine("Diagonal YZ  = {0:f2}", GeometryUtils.CalcDiagonal2Sides(Height, Depth));
+		}
+	}
 }
