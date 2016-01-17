@@ -1,15 +1,28 @@
 ﻿namespace Assertions_Homework
 {
 	using System;
+	using System.Diagnostics;
 
-	public static class SortUtils
+	public static class CollectionUtils
 	{
 		public static void SelectionSort<T>(T[] arr) where T : IComparable<T>
 		{
+			Debug.Assert(arr.Length > 0, "Cannot sort collection with less than one element.");
+
+			if (arr.Length == 1)
+			{
+				return;
+			}
+
 			for (int index = 0; index < arr.Length - 1; index++)
 			{
 				int minElementIndex = FindMinElementIndex(arr, index, arr.Length - 1);
 				Swap(ref arr[index], ref arr[minElementIndex]);
+			}
+
+			for (int i = 1; i < arr.Length; i++)
+			{
+				Debug.Assert(arr[i - 1].CompareTo(arr[i]) < 0, "Collection is not properly sorted.");
 			}
 		}
 
