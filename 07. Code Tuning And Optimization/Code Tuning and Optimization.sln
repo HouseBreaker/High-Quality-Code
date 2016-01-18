@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. SolarSystem", "01. Solar System\01. SolarSystem.csproj", "{2F30E9AF-8256-40AF-B356-EA14E55CE9D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Clean The Smelly Code", "01. Clean The Smelly Code\01. Clean The Smelly Code.csproj", "{2F30E9AF-8256-40AF-B356-EA14E55CE9D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Performance of operations", "02. Performance of operations\02. Performance of operations.csproj", "{EDBA8EA3-3149-48DE-8524-580865A9E5DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Performance of Operations", "02. Performance of Operations\02. Performance of Operations.csproj", "{EDBA8EA3-3149-48DE-8524-580865A9E5DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
