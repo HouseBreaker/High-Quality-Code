@@ -1,0 +1,3 @@
+﻿The bottleneck was Classes.OrbitsCalculator.EarthPosition();
+
+It was a for loop which was unnecessary and prevented the program from running efficiently.
