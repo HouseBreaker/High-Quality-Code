@@ -174,7 +174,6 @@ namespace UnitTesting
 			Assert.AreEqual(Expected, actual);
 		}
 
-		// todo: Contains
 		[TestMethod]
 		public void Contains_DoesContain()
 		{
