@@ -1,8 +1,8 @@
-﻿using System;
-
-namespace CustomLinkedList
+﻿namespace CustomLinkedList
 {
-    /// <summary>Dynamic (linked) list class definition</summary>
+	using System;
+
+	/// <summary>Dynamic (linked) list class definition</summary>
     public class DynamicList<T>
     {
         private class ListNode
@@ -166,7 +166,7 @@ namespace CustomLinkedList
             if (currentNode != null)
             {
                 // The element is found in the list -> remove it
-                RemoveListNode(currentNode, prevNode);
+                this.RemoveListNode(currentNode, prevNode);
                 return currentIndex;
             }
 
@@ -207,7 +207,7 @@ namespace CustomLinkedList
         /// </returns>
         public bool Contains(T item)
         {
-            int index = IndexOf(item);
+            int index = this.IndexOf(item);
             bool found = index != -1;
             return found;
         }
@@ -220,7 +220,7 @@ namespace CustomLinkedList
         private void RemoveListNode(ListNode node, ListNode prevNode)
         {
             this.count--;
-            if (count == 0)
+            if (this.count == 0)
             {
                 // The list becomes empty -> remove head and tail
                 this.head = null;

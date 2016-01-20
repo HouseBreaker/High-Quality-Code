@@ -1,8 +1,7 @@
 ﻿// ReSharper disable InconsistentNaming
-namespace UnitTesting
+namespace CustomLinkedList.Tests
 {
 	using System;
-	using System.Diagnostics;
 
 	using CustomLinkedList;
 
