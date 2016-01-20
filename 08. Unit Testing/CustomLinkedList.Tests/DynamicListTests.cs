@@ -78,7 +78,7 @@ namespace CustomLinkedList.Tests
 			const int Expected = 4;
 			var actual = this.list.Count;
 
-			Assert.AreEqual(Expected, actual, "Elements are not being added properly.");
+			Assert.AreEqual(Expected, actual);
 		}
 
 		[TestMethod]
