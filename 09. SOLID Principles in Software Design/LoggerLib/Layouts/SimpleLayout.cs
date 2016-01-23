@@ -11,7 +11,10 @@
 			// <date-time> - <report level> - <message>
 			var date = DateTime.Now;
 
-			var formatString = $"{date} - {level} - {message}";
+			var dateOfError = date.ToString("d");
+			var timeOfError = date.ToString("t");
+
+			var formatString = $"{dateOfError}-{timeOfError} - {level} - {message}";
 
 			return formatString;
 		}

@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BAC9D341-2A93-4185-A06F-D97DCD7EEB27}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{43EB55D3-58D6-48F0-BD2E-CE15A08CE943}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LoggerLib</RootNamespace>
-    <AssemblyName>LoggerLib</AssemblyName>
+    <RootNamespace>LoggerTest</RootNamespace>
+    <AssemblyName>LoggerTest</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,18 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Appenders\Appender.cs" />
-    <Compile Include="Appenders\ConsoleAppender.cs" />
-    <Compile Include="Appenders\IAppender.cs" />
-    <Compile Include="Layouts\ILayout.cs" />
-    <Compile Include="Layouts\Layout.cs" />
-    <Compile Include="Loggers\ErrorLevel.cs" />
-    <Compile Include="Loggers\ILogger.cs" />
-    <Compile Include="Layouts\SimpleLayout.cs" />
-    <Compile Include="Loggers\Logger.cs" />
+    <Compile Include="ExtensionClassesByUser\XmlLayout.cs" />
+    <Compile Include="LoggerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LoggerLib\LoggerLib.csproj">
+      <Project>{bac9d341-2a93-4185-a06f-d97dcd7eeb27}</Project>
+      <Name>LoggerLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
