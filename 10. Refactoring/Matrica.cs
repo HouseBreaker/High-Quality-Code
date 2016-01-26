@@ -1,10 +1,10 @@
-﻿using System;
-
-namespace Task3
+﻿namespace GameFifteen
 {
-	class WalkInMatrica
+	using System;
+
+	internal static class WalkInMatrica
 	{
-		static void Change(ref int dx, ref int dy)
+		internal static void Change(ref int dx, ref int dy)
 		{
 			int[] dirX = { 1, 1, 1, 0, -1, -1, -1, 0 };
 
@@ -31,7 +31,7 @@ namespace Task3
 			dy = dirY[cd + 1];
 		}
 
-		static bool Proverka(int[,] arr, int x, int y)
+		internal static bool Proverka(int[,] arr, int x, int y)
 		{
 			int[] dirX = { 1, 1, 1, 0, -1, -1, -1, 0 };
 			int[] dirY = { 1, 0, -1, -1, -1, 0, 1, 1 };
@@ -59,7 +59,7 @@ namespace Task3
 			return false;
 		}
 
-		static void FindCell(int[,] arr, out int x, out int y)
+		internal static void FindCell(int[,] arr, out int x, out int y)
 		{
 			x = 0;
 			y = 0;
@@ -77,7 +77,7 @@ namespace Task3
 			}
 		}
 
-		static void Main(string[] args)
+		internal static void Main(string[] args)
 		{
 			// Console.WriteLine( "Enter a positive number " );
 			// string input = Console.ReadLine(  );
@@ -89,7 +89,7 @@ namespace Task3
 			// }
 			int n = 3;
 			int[,] matrica = new int[n, n];
-			int step = n, k = 1, i = 0, j = 0, dx = 1, dy = 1;
+			int k = 1, i = 0, j = 0, dx = 1, dy = 1;
 			while (true)
 			{
 				// malko e kofti tova uslovie, no break-a raboti 100% : )
@@ -99,7 +99,8 @@ namespace Task3
 				{
 					break;
 				}
- // prekusvame ako sme se zadunili
+
+				// prekusvame ako sme se zadunili
 				if (i + dx >= n || i + dx < 0 || j + dy >= n || j + dy < 0 || matrica[i + dx, j + dy] != 0)
 				{
 					while (i + dx >= n || i + dx < 0 || j + dy >= n || j + dy < 0 || matrica[i + dx, j + dy] != 0)
@@ -138,7 +139,8 @@ namespace Task3
 					{
 						break;
 					}
- // prekusvame ako sme se zadunili
+
+					// prekusvame ako sme se zadunili
 					if (i + dx >= n || i + dx < 0 || j + dy >= n || j + dy < 0 || matrica[i + dx, j + dy] != 0)
 					{
 						while (i + dx >= n || i + dx < 0 || j + dy >= n || j + dy < 0 || matrica[i + dx, j + dy] != 0)
