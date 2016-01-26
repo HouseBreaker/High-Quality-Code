@@ -4,7 +4,7 @@ namespace Task3
 {
 	class WalkInMatrica
 	{
-		static void change(ref int dx, ref int dy)
+		static void Change(ref int dx, ref int dy)
 		{
 			int[] dirX = { 1, 1, 1, 0, -1, -1, -1, 0 };
 
@@ -31,7 +31,7 @@ namespace Task3
 			dy = dirY[cd + 1];
 		}
 
-		static bool proverka(int[,] arr, int x, int y)
+		static bool Proverka(int[,] arr, int x, int y)
 		{
 			int[] dirX = { 1, 1, 1, 0, -1, -1, -1, 0 };
 			int[] dirY = { 1, 0, -1, -1, -1, 0, 1, 1 };
@@ -59,7 +59,7 @@ namespace Task3
 			return false;
 		}
 
-		static void find_cell(int[,] arr, out int x, out int y)
+		static void FindCell(int[,] arr, out int x, out int y)
 		{
 			x = 0;
 			y = 0;
@@ -95,7 +95,7 @@ namespace Task3
 				// malko e kofti tova uslovie, no break-a raboti 100% : )
 				matrica[i, j] = k;
 
-				if (!proverka(matrica, i, j))
+				if (!Proverka(matrica, i, j))
 				{
 					break;
 				}
@@ -104,7 +104,7 @@ namespace Task3
 				{
 					while (i + dx >= n || i + dx < 0 || j + dy >= n || j + dy < 0 || matrica[i + dx, j + dy] != 0)
 					{
-						change(ref dx, ref dy);
+						Change(ref dx, ref dy);
 					}
 				}
 
@@ -123,7 +123,7 @@ namespace Task3
 				Console.WriteLine();
 			}
 
-			find_cell(matrica, out i, out j);
+			FindCell(matrica, out i, out j);
 			if (i != 0 && j != 0)
 			{
 				// taka go napravih, zashtoto funkciqta ne mi davashe da ne si definiram out parametrite
@@ -134,7 +134,7 @@ namespace Task3
 				{
 					// malko e kofti tova uslovie, no break-a raboti 100% : )
 					matrica[i, j] = k;
-					if (!proverka(matrica, i, j))
+					if (!Proverka(matrica, i, j))
 					{
 						break;
 					}
@@ -143,7 +143,7 @@ namespace Task3
 					{
 						while (i + dx >= n || i + dx < 0 || j + dy >= n || j + dy < 0 || matrica[i + dx, j + dy] != 0)
 						{
-							change(ref dx, ref dy);
+							Change(ref dx, ref dy);
 						}
 					}
 
