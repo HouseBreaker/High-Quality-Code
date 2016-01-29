@@ -1,4 +1,4 @@
-﻿namespace WalkInMatrix
+﻿namespace RotatingMatrix
 {
 	public static class MatrixGenerator
 	{

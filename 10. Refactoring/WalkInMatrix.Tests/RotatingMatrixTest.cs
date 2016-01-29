@@ -4,7 +4,7 @@
 
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-	using RotatingMatrix;
+	using WalkInMatrix;
 
 	[TestClass]
 	public class RotatingMatrixTest
