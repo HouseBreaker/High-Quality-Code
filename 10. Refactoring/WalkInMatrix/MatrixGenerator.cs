@@ -1,4 +1,4 @@
-﻿namespace RotatingMatrix
+﻿namespace WalkInMatrix
 {
 	public static class MatrixGenerator
 	{
@@ -63,10 +63,10 @@
 		}
 
 		private static bool NextDestinationIsntAvailable(
-			int[,] matrix, 
-			int currectRow, 
-			int currectCol, 
-			int directionRow, 
+			int[,] matrix,
+			int currectRow,
+			int currectCol,
+			int directionRow,
 			int directionCol)
 		{
 			var hasInvalidRow = HasInvalidRow(matrix, currectRow, directionRow);
@@ -77,10 +77,10 @@
 		}
 
 		private static bool IsNextCellUnavailable(
-			int[,] matrix, 
-			int currentRow, 
-			int currentCol, 
-			int directionRow, 
+			int[,] matrix,
+			int currentRow,
+			int currentCol,
+			int directionRow,
 			int directionCol)
 		{
 			return matrix[currentRow + directionRow, currentCol + directionCol] != 0;

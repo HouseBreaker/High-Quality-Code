@@ -1,8 +1,8 @@
-﻿namespace RotatingMatrix
+﻿namespace WalkInMatrix
 {
 	using System;
 
-	public class ConsoleWrapper
+	public static class ConsoleWrapper
 	{
 		private static void Main()
 		{
